@@ -10,18 +10,18 @@ aux = ''
 n = 0
 f = 0
 
-fp = open(os.getcwd() + '/Documents/CIC/loc.txt')
+fp = open(os.getcwd() + '/Documents/CIC/loc1704.txt')
 
 #Counting number of lines
 for i, line in enumerate(fp):
     f = f+1
 
-f = int(f/13) #Number of 13 line paragraphs
+f = int(f/9) #Number of 13 line paragraphs
  
 fp.seek(0,0) #Resets the file pointer
-                       
+                     
 for count in range(f):
-    line_numbers = [n, n+1, n+2, n+3, n+4, n+5, n+6, n+7, n+8, n+9, n+10, n+11, n+12]
+    line_numbers = [n, n+1, n+2, n+3, n+4, n+5, n+6, n+7, n+8]
     aux = ''
     fp.seek(0,0)
 
@@ -34,9 +34,9 @@ for count in range(f):
 
     list.append(json_aux)
     
-    n = n+13
+    n = n+9
 
-print(list[15]['src'][2]['y'])
+#print(list[15]['src'][2]['y'])
 #print(list[2]['timeStamp'])
 
 #SECOND PART: REPRESENTING THIS DATA IN 4 QUADRANTS
@@ -45,7 +45,7 @@ print(list[15]['src'][2]['y'])
 timestamp = []
 E = []
 Emax = 0
-nPots = 8
+nPots = 4
 
 #Timestamp array gets created
 for i in range(len(list)):
